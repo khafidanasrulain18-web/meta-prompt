@@ -5,6 +5,11 @@
 
 import { NextResponse } from 'next/server';
 
+// Respons detail (max_tokens tinggi) dari DeepSeek bisa makan waktu lebih
+// dari batas default hosting serverless (mis. Vercel Hobby = 10 detik).
+// Ini menaikkan batas waktu function ini secara spesifik.
+export const maxDuration = 60;
+
 const DEEPSEEK_API_URL = 'https://api.deepseek.com/v1/chat/completions';
 
 interface DeepSeekMessage {
