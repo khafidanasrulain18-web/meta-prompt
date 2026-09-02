@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-gray-50/50 text-gray-900 antialiased;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
+}
+
+@layer components {
+  .btn-apple-primary {
+    @apply inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-medium bg-blue-500 text-white hover:bg-blue-600 active:scale-[0.98] shadow-sm transition-all duration-200;
+  }
+  .btn-apple-secondary {
+    @apply inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-medium bg-gray-100 text-gray-800 hover:bg-gray-200 active:scale-[0.98] transition-all duration-200;
+  }
+}
